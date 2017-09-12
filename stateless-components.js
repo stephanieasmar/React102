@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Child } from './Child';
 
-
 class Parent extends React.Component {
   constructor(props) {
     super(props);
@@ -21,9 +20,12 @@ class Parent extends React.Component {
   }
 
   render() {
-    return <div></div>;
+    return <Child name={this.state.name} />;
   }
 }
+
+ReactDOM.render(<Parent />, document.getElementById('app'));
+
 
 // ********** CHILD.js **********
 import React from 'react';
@@ -33,3 +35,7 @@ export class Child extends React.Component {
     return <h1>Hey, my name is {this.props.name}!</h1>;
   }
 }
+
+
+// A React component should use props to store information that can be changed, but can only be changed by a different component.
+// A React component should use state to store information that the component itself can change.
