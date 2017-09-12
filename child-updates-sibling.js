@@ -96,3 +96,15 @@ export class Sibling extends React.Component {
   }
 }
 
+
+// STATELESS COMPONENTS INHERIT FROM STATEFUL COMPONENTS RECAP:
+
+// A stateful component class defines a function that calls this.setState.
+// The stateful component passes that function down to a stateless component. 
+// That stateless component class defines a function that calls the passed-down function, and that can take an event object as an argument. 
+// The stateless component class uses this new function as an event handler. 
+// When an event is detected, the parent's state updates. (A user selects a new dropdown menu item)
+// The stateful component class passes down its state, distinct from the ability to change its state, to a different stateless component. 
+// That stateless component class receives the state and displays it. 
+// An instance of the stateful component class is rendered. One stateless child component displays the state, and a different stateless child component displays a way to change
+// This pattern occurs in React all the time! The more that you see it, the more that its elegance will become clear.
