@@ -27,6 +27,9 @@ MessageDisplayer.propTypes = {
 
 
 
+
+// ********** EXAMPLE CODE ********** //
+
 // CONTAINER COMPOBENT
 import React from 'react';
 
